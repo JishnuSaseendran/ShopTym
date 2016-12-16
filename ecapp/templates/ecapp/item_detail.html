@@ -1,0 +1,22 @@
+{% extends 'ecapp/base.html' %}
+
+{% block content %}
+    <div class="item">
+        {% if item.published_date %}
+            <div class="date">
+                {{ item.published_date }}
+            </div>
+        {% else %}
+            <a class="btn btn-default" href="{% url 'item_publish' pk=item.pk %}">Publish</a>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <a class="btn btn-default" href="{% url 'item_edit' pk=item.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a class="btn btn-default" href="{% url 'item_remove' pk=item.pk %}"><span class="glyphicon glyphicon-trash"></span></a>
+        {% endif %}
+        <p>Posted by, {{item.user}}</p>
+        <h2>{{ item.item_name }}</h2>
+        <p>₹ {{item.item_cost}}</p>
+        <img src="{{ item.item_logo.url }}">
+        <p>{{ item.item_details|linebreaksbr }}</p>
+    </div>
+{% endblock %}

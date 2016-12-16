@@ -1,0 +1,55 @@
+body {
+    background: white url("background.png");
+}
+
+.page-header {
+    background-color: #000000;
+    font-family: 'Lobster', cursive;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #CFED21;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h2 {
+    font-family: sans-serif;
+    
+    
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.item-form textarea, .item-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 15pt;
+    margin-right: 20px;
+}
+
+.item {
+    margin-top: 50px;
+    
+    
+}
+
+.item h1 a, .item h1 a:visited {
+    color: #000000;
+}

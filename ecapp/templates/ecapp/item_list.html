@@ -1,0 +1,20 @@
+{% extends 'ecapp/base.html' %}
+
+{% block content %}
+    {% for item in items %}
+        <div class="item">
+            <div class="col-sm-4 col-lg-2">
+                <div class="thumbnail">
+                    <img src="{{ item.item_logo.url }}">
+                </div>
+            </div>
+            <h2><a href="{% url 'item_detail' pk=item.pk %}">{{ item.item_name }}</a></h2>
+            <div class="date">
+                <p>published on: {{ item.published_date }}</p>
+            </div>
+            <p>₹ {{item.item_cost}}</p>
+            <p>{{ item.item_details|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
+
